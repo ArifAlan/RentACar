@@ -1,4 +1,5 @@
 ﻿using Application.Features.Brands.Commands.Create;
+using Application.Features.Brands.Commands.Delete;
 using Application.Features.Brands.Commands.Update;
 using Application.Features.Brands.Queries.GetById;
 using Application.Features.Brands.Queries.GetList;
@@ -24,6 +25,10 @@ namespace Application.Features.Brands.Profiles
             //update
             CreateMap<Brand, UpdateBrandCommand>().ReverseMap();
             CreateMap<Brand, UpdatedBrandResponse>().ReverseMap();
+
+            //delete
+            CreateMap<Brand, DeleteBrandCommand>().ReverseMap();
+            CreateMap<Brand, DeletedBrandResponse>().ReverseMap();
 
             //GetList
             CreateMap<Brand, GetListBrandListItemDto>().ReverseMap();
